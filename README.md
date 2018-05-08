@@ -15,7 +15,7 @@ object_flagging looks through all the csv files you feed into it and flags the o
 file_digging does a some analysis on the flagged objects (or whatever you feed into it). For example, it finds CLQ candidates by vary more than X amount. It also tries to spot which ones stay in the varied state for a while. 
 
 You should have a directory named CLQ_DB where there will be a galaxy directory, quasar directory and catalog directory. 
-In catalogs you should have the SDSS DR14 QSO catalog and the DR8 Galaxy Catalog as fits files. In the Quasar and Galaxy directories you should find the script to fetch data and all associated csv files in two seperate folders respectively. 
+In catalogs you should have (or need to download) the SDSS DR14 QSO catalog and the SDSS DR8 Galaxy Catalog as fits files. In the Quasar and Galaxy directories you should find the script to fetch data and all associated csv files in two seperate folders respectively. 
 
 db_finding_Quasars.py and db_finding_Galaxy.py looks through the SDSS DR14 catalog and cross-references categorized objects (quasars or galaxies respectively) with ones in the WISE data. If the object is also in the WISE catalog is then pulls the light curves of that object from WISE multiepoch photometry tables. You can read up on how the URL works on the WISE/IPAC website. The code outputs csv files to a location of your choice. It also will start on a previous multiple of 10 if it crashes, so don't delete the EntryNumber.txt files! 
 
